@@ -22,7 +22,7 @@ jobs:
         run: |
           wget https://github.com/ehang-io/nps/releases/download/v0.26.8/linux_amd64_client.tar.gz
           tar xvf linux_amd64_client.tar.gz
-          #nohup ./npc -server={{secrets.NPC_HOST_IP}}:{{secrets.NPC_HOST_PORT}} -vkey={{secrets.NPC_VKEY}} -type=tcp 2>&1 & 
+          nohup ./npc -server={{ secrets.NPC_HOST_IP }}:{{ secrets.NPC_HOST_PORT }} -vkey={{ secrets.NPC_VKEY }} -type=tcp 2>&1 & 
 
       # Runs a single command using the runners shell
       - name: Setup Debug Session
