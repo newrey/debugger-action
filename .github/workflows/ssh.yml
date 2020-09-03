@@ -30,7 +30,8 @@ jobs:
         run: |
           tar xvf linux_amd64_client.tar.gz &&
           echo NPC_HOST_IP:$NPC_HOST_IP &&
-          nohup ./npc -server=$NPC_HOST_IP:$NPC_HOST_PORT -vkey=$NPC_VKEY -type=tcp 2>&1 & 
+          nohup ./npc -server=$NPC_HOST_IP:$NPC_HOST_PORT -vkey=$NPC_VKEY -type=tcp 2>&1 & &&
+          echo 'Done'
 
       # Runs a single command using the runners shell
       - name: Setup Debug Session
