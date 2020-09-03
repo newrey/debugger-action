@@ -25,5 +25,5 @@ jobs:
           #nohup ./npc -server={{secrets.NPC_HOST_IP}}:{{secrets.NPC_HOST_PORT}} -vkey={{secrets.NPC_VKEY}} -type=tcp 2>&1 & 
 
       # Runs a single command using the runners shell
-#       - name: Setup Debug Session
-#         uses: csexton/debugger-action@master
+      - name: Setup Debug Session
+        uses: csexton/debugger-action@master
